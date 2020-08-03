@@ -3,7 +3,7 @@
     <color name="background">#000000</color>
     <color name="ColorBtn">#E60813</color>
     <color name="ColorBtnTextIN">#FFD8CD</color>
-    <color name="backgroundSecond">#333333</color>
+    <color name="backgroundSecond">#131313</color>
     <color name="Colortext">#D4872E</color>
     <color name="White">#FFFFFF</color>
 </resources>

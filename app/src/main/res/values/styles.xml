@@ -3,21 +3,7 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <style name="some_id">
 
-            <item name="android:textSize">
-                18sp
-            </item>
-
-            <item name="android:letterSpacing">
-                -0.02
-            </item>
-
-            <item name="android:textColor">
-                #FFD8CD
-            </item>
-
-        </style>
     </style>
 
 </resources>
