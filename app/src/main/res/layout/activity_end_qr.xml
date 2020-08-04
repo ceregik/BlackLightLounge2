@@ -5,10 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
-
-
+    tools:context=".end_qr">
 
     <Button
         android:id="@+id/button"
@@ -21,7 +18,7 @@
         android:layout_marginBottom="16dp"
         android:radius="2dip"
         android:background="@color/ColorBtn"
-        android:text="Войти"
+        android:text="Выйти"
         android:textAllCaps="false"
         android:textColor="@color/ColorBtnTextIN"
         android:textSize="18dp"
@@ -30,27 +27,37 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="3dp"
-        android:layout_marginLeft="3dp"
-        android:layout_marginTop="50dp"
+        android:id="@+id/imageView2"
+        android:layout_width="104dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
+        app:srcCompat="@drawable/logo_words" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="26dp"
+        android:layout_width="80dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="12dp"
         android:layout_marginRight="12dp"
-        android:text="Помощь"
+        android:text="0 бонусов"
         android:textColor="@color/White"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="335dp"
+        android:layout_height="320dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.42000002"
+        app:srcCompat="@drawable/qr_code_img" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
