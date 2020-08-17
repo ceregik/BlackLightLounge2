@@ -30,11 +30,19 @@ public class MainActivity extends AppCompatActivity {
         enter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent homeIntent = new Intent(MainActivity.this, lohin_step1.class);
-                homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                startActivity(homeIntent);
-                finish();
+                if(User == null) {
+                    Intent homeIntent = new Intent(MainActivity.this, lohin_step1.class);
+                    homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(homeIntent);
+                    finish();
+                } else{
+                    Intent homeIntent = new Intent(MainActivity.this, end_qr.class);
+                    homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(homeIntent);
+                    finish();
+                }
             }
         });
     }

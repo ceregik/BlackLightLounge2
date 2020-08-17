@@ -141,7 +141,7 @@ public class lohin_step1 extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
 
-                            Intent homeIntent = new Intent(lohin_step1.this, MainActivity.class);
+                            Intent homeIntent = new Intent(lohin_step1.this, end_qr.class);
                             homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                             homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                             startActivity(homeIntent);
