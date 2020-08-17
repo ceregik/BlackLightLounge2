@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "263401547927",
+    "firebase_url": "https://blacklightlounge-c3480.firebaseio.com",
+    "project_id": "blacklightlounge-c3480",
+    "storage_bucket": "blacklightlounge-c3480.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:263401547927:android:4dd18f4d63641f8c2fa1d2",
+        "android_client_info": {
+          "package_name": "com.example.blacklightlounge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "263401547927-aqd6e86hqf23ubl80n9rvj4i4jjmt7a5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.blacklightlounge",
+            "certificate_hash": "a9215094a483e1571221b6587c8bb655b35fcffa"
+          }
+        },
+        {
+          "client_id": "263401547927-sjubl5pbf7pi6euh7452rmgcnjn192sh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3Zhh8dAy2uXL9EcR-zJMNnnazrp0s8vQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "263401547927-sjubl5pbf7pi6euh7452rmgcnjn192sh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
