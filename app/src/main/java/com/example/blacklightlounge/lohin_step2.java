@@ -84,6 +84,60 @@ public class lohin_step2 extends AppCompatActivity {
                                 homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                 startActivity(homeIntent);
                                 finish();
+                                db.collection("users")
+                                        .document(User.getPhoneNumber())
+                                        .get()
+                                        .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                                            @Override
+                                            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                                                if (task.isSuccessful()) {
+                                                    DocumentSnapshot document = task.getResult();
+                                                    if (document.exists()) {
+                                                       // name = document.getString("name");
+                                                        Log.d("TAG", name );
+                                                        Intent homeIntent = new Intent(lohin_step2.this, end_qr.class);
+                                                        homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                                        homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                                        startActivity(homeIntent);
+                                                        finish();
+                                                    }else {
+                                                        Map<String, Object> user = new HashMap<>();
+                                                        user.put("points", 0);
+                                                        db.collection("users")
+                                                                .document(User.getPhoneNumber())
+                                                                .set(user)
+                                                                .addOnSuccessListener(new OnSuccessListener<Void>() {
+
+                                                                    @Override
+                                                                    public void onSuccess(Void aVoid) {
+                                                                        Log.d(TAG, "DocumentSnapshot successfully written!");
+                                                                        Intent homeIntent = new Intent(lohin_step2.this, end_qr.class);
+                                                                        homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                                                        homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                                                        startActivity(homeIntent);
+                                                                        finish();
+
+                                                                    }
+                                                                })
+                                                                .addOnFailureListener(new OnFailureListener() {
+                                                                    @Override
+                                                                    public void onFailure(@NonNull Exception e) {
+                                                                        Log.w(TAG, "Error writing document", e);
+                                                                        enter.setText("Error");
+                                                                    }
+                                                                });
+                                                        Intent next = new Intent(lohin_step2.this, MainActivity.class);
+                                                        startActivity(next);
+                                                    }
+                                                }
+                                            }
+                                        })
+                                        .addOnCanceledListener(new OnCanceledListener() {
+                                            @Override
+                                            public void onCanceled() {
+
+                                            }
+                                        });
                                /* db.collection("users")
                                         .document(name)
                                         .set(user)
